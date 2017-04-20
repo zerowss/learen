@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header-wrap">
+        <div class="header clearfix">
+            <div class="logo lf">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="nav-wrap lf">
+                <ul class="nav clearfix">
+                    <li class="nav-list">
+                        <a href="#">BLOG</a>
+                        <ul class="nav-sub">
+                            <li><a href="index.html">RANTS</a></li>
+                            <li><a href="beauty.html">BEAUTY</a></li>
+                            <li><a href="food.html">FOOD</a></li>
+                            <li><a href="travel.html">TRAVEL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#">ABOUT</a>
+                        <ul class="nav-sub">
+                            <li><a href="aboutMe.html">ABOUT ME</a></li>
+                            <li><a href="ask.html">ASK ME </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="videos.html">VIDEOS</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="favourites.html">FAVOURITES</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-wrap lr">
+                <a href="zixinzxc02@gmail.com"></a>
+                <a href="https://www.youtube.com/channel/UCZ7luhPig8mHm_U8g4gATXg"></a>
+                <a href="https://www.instagram.com/kimbaeboo/?hl=en"></a>
+                <a href="https://twitter.com/?lang=en"></a>
+                <a href="https://www.facebook.com/tan.zixin.3"></a>
+                <a href="https://plus.google.com/113506349273879240467）"></a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="images/banner.png" alt="">
+        <h1>K I M B A E B O O</h1>
+    </div>
+    <div class="content-wrap">
+        <div class="content">
+            <div class="videos-wrap">
+                <h1>COMING UP SOON </h1>
+                <div class="vid">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/uEKoTdpE3WU" frameborder="0" allowfullscreen></iframe>
+                    <div class="btn" id="btn">
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="link-wrap">
+        <a href="zixinzxc02@gmail.com"></a>
+        <a href="https://www.youtube.com/channel/UCZ7luhPig8mHm_U8g4gATXg"></a>
+        <a href="https://www.instagram.com/kimbaeboo/?hl=en"></a>
+        <a href="https://twitter.com/?lang=en"></a>
+        <a href="https://www.facebook.com/tan.zixin.3"></a>
+        <a href="https://plus.google.com/113506349273879240467）"></a>
+    </div>
+    <div id="time"></div>
+</div>
+<script>
+    (function () {
+
+        getTime();
+        play();
+        function getTime() {
+            var box = document.getElementById('time');
+            setInterval(function () {
+                var box = document.getElementById('time');
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = toD(date.getMonth() + 1);
+                var day = toD(date.getDate());
+                var hours = toD(date.getHours());
+                var minute = toD(date.getMinutes());
+                var sec = toD(date.getSeconds());
+
+                var str = year + '/' + month + '/' + day + ' ' + hours + ':' + minute + ':' + sec;
+                box.innerHTML=str;
+            },1000);
+
+            function toD(nub) {
+                return nub < 10 ? '0' + nub : '' + nub;
+            }
+        }
+
+        function play() {
+            var btn = document.getElementById('btn');
+            btn.onclick = function () {
+                this.style.display = 'none';
+            }
+        }
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/prototype.js"></script>
+    <script src="js/calendarview.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="header-wrap">
+        <div class="header clearfix">
+            <div class="logo lf">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="nav-wrap lf">
+                <ul class="nav clearfix">
+                    <li class="nav-list">
+                        <a href="#">BLOG</a>
+                        <ul class="nav-sub">
+                            <li><a href="index.html">RANTS</a></li>
+                            <li><a href="beauty.html">BEAUTY</a></li>
+                            <li><a href="food.html">FOOD</a></li>
+                            <li><a href="travel.html">TRAVEL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#">ABOUT</a>
+                        <ul class="nav-sub">
+                            <li><a href="aboutMe.html">ABOUT ME</a></li>
+                            <li><a href="ask.html">ASK ME </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="videos.html">VIDEOS</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="favourites.html">FAVOURITES</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-wrap lr">
+                <a href="zixinzxc02@gmail.com"></a>
+                <a href="https://www.youtube.com/channel/UCZ7luhPig8mHm_U8g4gATXg"></a>
+                <a href="https://www.instagram.com/kimbaeboo/?hl=en"></a>
+                <a href="https://twitter.com/?lang=en"></a>
+                <a href="https://www.facebook.com/tan.zixin.3"></a>
+                <a href="https://plus.google.com/113506349273879240467）"></a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="images/banner.png" alt="">
+        <h1>K I M B A E B O O</h1>
+    </div>
+    <div class="content-wrap">
+        <div class="content">
+            <div class="sub-l">
+                <div class="blog-text">
+
+                    <div class="text" style="border: none">
+                        <p>
+                            Some of my favourites will be updated here.
+                        </p>
+
+                        <p>
+                            Movies// Music//Food//Videos//Books//Applications//Shops//Countries
+                            Anything and everything!!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sub-r">
+                <div class="site-info">
+                    <h3 class="site-title">KIMBERLEY TAN</h3>
+                    <div class="site-description">
+                        <p class="site-text">
+                            I love surprises, people and<br>
+                            learning new things;<br>
+                            H old<br>
+                            O n<br>
+                            P ain<br>
+                            E nds<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="site-info">
+                    <h3 class="site-title">TRAVEL</h3>
+                    <div class="site-description">
+                        <div class="pic">
+                            <img src="images/travel01.png" alt="" width="200">
+                        </div>
+                        <div class="pic">
+                            <img src="images/travel02.png" alt="" width="200">
+                        </div>
+                        <div class="pic">
+                            <img src="images/travel03.png" alt="" width="200">
+                        </div>
+                        <div class="pic">
+                            <img src="images/travel04.png" alt="" width="200">
+                        </div>
+                    </div>
+                </div>
+                <div class="site-info">
+                    <h3 class="site-title">SEARCH MY PAGE</h3>
+                    <div class="site-description">
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="site-info">
+                    <h3 class="site-title">ARCHIEVES</h3>
+                    <div class="site-description">
+                        <div class="dateTime" id="embeddedCalendar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="link-wrap">
+        <a href="zixinzxc02@gmail.com"></a>
+        <a href="https://www.youtube.com/channel/UCZ7luhPig8mHm_U8g4gATXg"></a>
+        <a href="https://www.instagram.com/kimbaeboo/?hl=en"></a>
+        <a href="https://twitter.com/?lang=en"></a>
+        <a href="https://www.facebook.com/tan.zixin.3"></a>
+        <a href="https://plus.google.com/113506349273879240467）"></a>
+    </div>
+    <div id="time"></div>
+</div>
+<script>
+    (function () {
+        function setupCalendars() {
+            Calendar.setup(
+                {
+                    parentElement: 'embeddedCalendar'
+                }
+            )
+        }
+
+        Event.observe(window, 'load', function () {
+            setupCalendars();
+            linkTo();
+        })
+        getTime();
+
+        function getTime() {
+            var box = document.getElementById('time');
+            setInterval(function () {
+                var box = document.getElementById('time');
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = toD(date.getMonth() + 1);
+                var day = toD(date.getDate());
+                var hours = toD(date.getHours());
+                var minute = toD(date.getMinutes());
+                var sec = toD(date.getSeconds());
+
+                var str = year + '/' + month + '/' + day + ' ' + hours + ':' + minute + ':' + sec;
+                box.innerHTML = str;
+            }, 1000);
+
+            function toD(nub) {
+                return nub < 10 ? '0' + nub : '' + nub;
+            }
+        }
+
+        function linkTo() {
+            var arr = [
+                {
+                    tit: "Milly's Eyelash Extensions",
+                    time: 'April 05, 2017',
+                    link: 'index.html'
+                },
+                {
+                    tit: 'Beauty',
+                    time: 'April 01, 2017',
+                    link: 'beauty.html'
+                },
+                {
+                    tit: 'Food',
+                    time: 'April 03, 2017',
+                    link: 'food.html'
+                },
+                {
+                    tit: 'Travel',
+                    time: 'April 06, 2017',
+                    link: 'travel.html'
+                }
+            ];
+            var embeddedCalendar = document.getElementById('embeddedCalendar');
+            var days = embeddedCalendar.querySelectorAll('.days');
+            days.forEach(function (item, i) {
+                var tds = item.querySelectorAll('td');
+                tds.forEach(function (el, index) {
+                    if (el.innerHTML == 5 && !el.hasClassName('otherDay')) {
+                        el.style.position = 'relative';
+                        el.style.backgroundColor = '#eee';
+                        el.innerHTML += "<a href='index.html' class='backLink'>Milly's Eyelash Extensions</a>";
+                        el.onmousemove = function () {
+                            this.children[0].style.display = 'block';
+                        }
+                        el.onmouseout = function () {
+                            this.children[0].style.display = 'none';
+                        }
+                    }
+                    if (el.innerHTML == 1 && !el.hasClassName('otherDay')) {
+                        el.style.position = 'relative';
+                        el.style.backgroundColor = '#eee';
+                        el.innerHTML += "<a href='beauty.html' class='backLink'>Beauty</a>";
+                        el.onmousemove = function () {
+                            this.children[0].style.display = 'block';
+                        }
+                        el.onmouseout = function () {
+                            this.children[0].style.display = 'none';
+                        }
+                    }
+                    if (el.innerHTML == 3 && !el.hasClassName('otherDay')) {
+                        el.style.position = 'relative';
+                        el.style.backgroundColor = '#eee';
+                        el.innerHTML += "<a href='food.html' class='backLink'>Food</a>";
+                        el.onmousemove = function () {
+                            this.children[0].style.display = 'block';
+                        }
+                        el.onmouseout = function () {
+                            this.children[0].style.display = 'none';
+                        }
+                    }
+                    if (el.innerHTML == 6 && !el.hasClassName('otherDay')) {
+                        el.style.position = 'relative';
+                        el.style.backgroundColor = '#eee';
+                        el.innerHTML += "<a href='travel.html' class='backLink'>Travel</a>";
+                        el.onmousemove = function () {
+                            this.children[0].style.display = 'block';
+                        }
+                        el.onmouseout = function () {
+                            this.children[0].style.display = 'none';
+                        }
+                    }
+                })
+            })
+        }
+    })();
+</script>
+</body>
+</html>
