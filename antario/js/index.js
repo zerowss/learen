@@ -174,6 +174,7 @@
         setRotate(box);
     }
 
+
     /*audio*/
     function musicGo(ele) {
         ele.addEventListener('click',function () {
