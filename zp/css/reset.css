@@ -1,0 +1,63 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  padding: 0;
+  margin: 0;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.clearfix {
+  clear: both;
+}
+html {
+  width: 100%;
+  font-family: 'Arial';
+  font-size: 14px;
+  outline: 0;
+  -webkit-text-size-adjust: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
