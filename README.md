@@ -10,4 +10,8 @@
 
 运用技术: JavaScript、jQuery、Html5、CSS3、media、web优化(CDN)
 
-技术描述:
+目录结构，会同步更新:
+````
+。/antario 仿安踏奥运移动端效果
+  
+````
