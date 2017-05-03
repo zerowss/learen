@@ -181,7 +181,9 @@
         }
     };
 
-    window.slideX = lb;
+    window.slideX = function (el,options) {
+        return new lb(el,options).init();
+    };
 
 
 })(window, undefined);
